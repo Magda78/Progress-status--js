@@ -30,6 +30,10 @@
     background-color: white;
 }
 
+.active {
+    border-color: #0492c2;
+}
+
 .line {
     position: absolute;
     top: 50%;
