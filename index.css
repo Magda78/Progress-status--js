@@ -34,14 +34,24 @@
     border-color: #0492c2;
 }
 
-.line {
+.line::before {
     position: absolute;
     top: 50%;
     width: 100%;
     height: 4px;
     background: lightgray;
     z-index: -1;
-    
+}
+
+.line {
+    content:'';
+    position: absolute;
+    top: 50%;
+    width: 0%;
+    height: 4px;
+    background: #0492c2;
+    z-index: -1;
+    transition: 2s ease;
 }
 
 .page__containerButtons > button {
@@ -52,5 +62,10 @@
     outline: none;
     padding: 10px;
     width: 100px;
+}
+
+.page__containerButtons > button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
 }
 
